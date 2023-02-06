@@ -10,7 +10,13 @@ nomElement.innerText = article.nom;
 const imageElement = document.createElement("img");
 imageElement.src = article.image;
 const prixElement = document.createElement("p");
-prixElement.innerText = 'Prix : ${article.prix} euro';
+prixElement.innerText = `Prix: ${article.prix} euro`;
 const categorieElement = document.createElement("p");
 categorieElement.innerText = article.categorie;
 
+//on creer la variable qui va contenir le contener des fiches produits
+const fiches = document.querySelector(".fiches");
+fiches.appendChild(nomElement);
+fiches.appendChild(imageElement);
+fiches.appendChild(prixElement);
+fiches.appendChild(categorieElement);
